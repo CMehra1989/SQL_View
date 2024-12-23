@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            font-size: 40px;
+            
+            color: var(--color-black);
+            margin: 0px; 
+            font-family:Georgia;}
+        
+        h2 {
+            font-size: 25px;
+            color: darkorchid;    
+            
+            margin: 0px; 
+            font-family:Georgia;}
+            
+
+        p,ul { 
+            font-family:Georgia;
+            font-size: 18px;
+            color: darkgreen;
+        }
+    </style>
+
+    
+
+</head>
+<body>
+    <span>
+        
+        <button style="  border: none;    padding-right: 40%;   background-color:white;">
+            
+        </button>
+        <button style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
+        font-size: 16px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='1.html'">
+            Database
+        </button>
+        <button style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
+        font-size: 16px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='2.html'">
+            Table
+        </button>
+        
+    </span>
+    
+
+        <h1>
+            <span>
+                SQL Overview
+            </span>
+        </h1>
+        
+        <p >
+        <b><strong>SQL </b> (pronounced “ess-que-el”) stands for Structured Query Language</strong>. <b>SQL</b> is used to communicate with a database. According to ANSI (American National Standards Institute), it is the standard language for relational database management systems. SQL statements are used to perform tasks such as update data on a database, or retrieve data from a database. Some common relational database management systems that use SQL are: Oracle, Sybase, Microsoft SQL Server, Access, Ingres, etc
+        
+        </p>
+        <p>Although most database systems use SQL, most of them also have their own additional proprietary extensions that are usually only used on their system. However, the standard SQL commands such as “Select”, “Insert”, “Update”, “Delete”, “Create”, and “Drop” can be used to accomplish almost everything that one needs to do with a database. This tutorial will provide you with the instruction on the basics of each of these commands as well as allow you to put them to practice using the SQL Interpreter.</p>
+        
+        </p>
+        
+        <br>
+        
+        <h2> <span>
+                CREATE DATABASE
+        </span> </h2>
+        <p>The CREATE DATABASE command establishes a new database within your SQL ecosystem.</p>
+        <br>
+        <span style="font-size: 20px ; background-color: lightgray;border-style: ridge;padding:15px">
+            <b>
+                <strong>CREATE DATABASE</strong>
+            </b> ChetanMehra_db;
+        </span>
+
+        
+        <br>
+        <br>
+        <br>
+        
+        <h2> <span>
+            List Databases in SQL
+        </span> </h2>
+        <p>Now we will verify whether the new database that we have just created has been successfully added to our system or not.</p>
+        <br>
+        <span style="font-size: 20px ; background-color: lightgray;border-style: ridge;padding:15px">
+            <b>
+                <strong>SHOW DATABASES</strong>
+            </b> ;
+        </span>
+
+        <br>
+        <br>
+        <br>
+         
+        <h2> <span>
+                USE DATABASE
+        </span> </h2>
+        <p>Once your database is created, we can switch to that database to begin adding tables, inserting data, and performing queries.</p>
+        <br>
+        <span style="font-size: 20px ; background-color: lightgray;border-style: ridge;padding:15px">
+            <b>
+                <strong>USE</strong>
+            </b> ChetanMehra_db;
+        </span>
+
+        <br>
+        <br>
+        <br>
+         
+        <h2> <span>
+            Delete a Database in SQL
+        </span> </h2>
+        <p>Once your database is created, we can switch to that database to begin adding tables, inserting data, and performing queries.</p>
+        <br>
+        <span style="font-size: 20px ; background-color: lightgray;border-style: ridge;padding:15px">
+            <b>
+                <strong>DROP DATABASE</strong>
+            </b> ChetanMehra_db;
+        </span>
+
+
+        <br>
+        <br>
+        <br>
+            <span>
+                <p>
+                    <span>Important Points About SQL CREATE DATABASE </span>
+                    <ul style="font-size: 15px;">
+                            <li value="1">
+                                <b><strong>Database Naming Conventions:</strong></b>
+                                    <span> When establishing a database, it is essential to ensure that the name is unique within your SQL environment. While most SQL implementations treat database names as case-insensitive, maintaining consistency in the naming format is advisable. Avoid using spaces; instead, opt for underscores (_). Example: my_database is preferable to my database.
+
+                                    </span>
+                                    <br>
+                            </li>
+                            <li value="2">
+                                <b><strong>Maximum Length of Database Names:</strong></b>
+                                <span> The typical maximum length for a database name in SQL is 128 characters. Ensure that your database name is both clear and concise while complying with this limit.
+
+                                    </span>
+                                    <br>
+                            </li>
+                            <li value="3"><b><strong>Permissions:</strong></b><span> It is imperative to possess the requisite privileges to create databases within your SQL environment. In many systems, the CREATE DATABASE command can only be executed by users with administrative privileges.
+
+                                </span>
+                                <br>
+                            </li>
+                            <li value="4"><b><strong>Case Insensitivity:</strong></b><span> Most SQL </span><a href="https://www.geeksforgeeks.org/introduction-of-dbms-database-management-system-set-1/" target="_blank" rel="noopener"><span>DBMSs</span></a><span> consider database names to be case-insensitive; however, it is recommended to consistently use lowercase or follow a uniform formatting style throughout your environment.</span><br></li><li value="5"><b><strong>Compatibility Across SQL Databases:</strong></b><span> While the CREATE DATABASE statement is generally similar across various SQL databases such as </span><a href="https://www.geeksforgeeks.org/mysql-tutorial/" target="_blank" rel="noopener"><span>MySQL</span></a><span>, PostgreSQL, and SQL Server, be mindful of minor syntactical differences that may exist in specific systems.
+
+                                </span>
+                            </li>
+                        </ul>
+                    
+                </p>
+            </span>
+
+
+        </body>
+</html>
