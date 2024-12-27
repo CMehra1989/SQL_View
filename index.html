@@ -4,324 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        h1 {
-            font-size: 40px;
-            
-            color: var(--color-black);
-            margin: 0px; 
-            font-family:Georgia;}
-        
-        h2 {
-            font-size: 25px;
-            color: darkorchid;    
-            
-            margin: 0px; 
-            font-family:Georgia;}
-            
-
-        p,ul { 
-            font-family:Georgia;
-            font-size: 18px;
-            color: darkgreen;
-        }
-    </style>
-
-    
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <span>
-        
-        <button style="  border: none;    padding-right: 40%;   background-color:white;">
-            
-        </button>
-        <button style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
-        font-size: 16px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='1.html'">
-            Database
-        </button>
-        <button style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
-        font-size: 16px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='2.html'">
-            Table
-        </button>
-        
-    </span>
-    
-
-        <h1>
-            <span>
-                SQL Overview
-            </span>
-        </h1>
-        
-        <p >
-        <b><strong>SQL </b> (pronounced “ess-que-el”) stands for Structured Query Language</strong>. <b>SQL</b> is used to communicate with a database. According to ANSI (American National Standards Institute), it is the standard language for relational database management systems. SQL statements are used to perform tasks such as update data on a database, or retrieve data from a database. Some common relational database management systems that use SQL are: Oracle, Sybase, Microsoft SQL Server, Access, Ingres, etc
-        
-        </p>
-        <p>Although most database systems use SQL, most of them also have their own additional proprietary extensions that are usually only used on their system. However, the standard SQL commands such as “Select”, “Insert”, “Update”, “Delete”, “Create”, and “Drop” can be used to accomplish almost everything that one needs to do with a database. This tutorial will provide you with the instruction on the basics of each of these commands as well as allow you to put them to practice using the SQL Interpreter.</p>
-        
-        </p>
-        
-        <br>
-        
-        <h2> <span>
-                CREATE DATABASE
-        </span> </h2>
-        <p>The CREATE DATABASE command establishes a new database within your SQL ecosystem.</p>
-        <br>
-        <span style="font-size: 20px ; background-color: lightgray;border-style: ridge;padding:15px">
-            <b>
-                <strong>CREATE DATABASE</strong>
-            </b> ChetanMehra_db;
-        </span>
-
-        
-        <br>
-        <br>
-        <br>
-        
-        <h2> <span>
-            List Databases in SQL
-        </span> </h2>
-        <p>Now we will verify whether the new database that we have just created has been successfully added to our system or not.</p>
-        <br>
-        <span style="font-size: 20px ; background-color: lightgray;border-style: ridge;padding:15px">
-            <b>
-                <strong>SHOW DATABASES</strong>
-            </b> ;
-        </span>
-
-        <br>
-        <br>
-        <br>
-         
-        <h2> <span>
-                USE DATABASE
-        </span> </h2>
-        <p>Once your database is created, we can switch to that database to begin adding tables, inserting data, and performing queries.</p>
-        <br>
-        <span style="font-size: 20px ; background-color: lightgray;border-style: ridge;padding:15px">
-            <b>
-                <strong>USE</strong>
-            </b> ChetanMehra_db;
-        </span>
-
-        <br>
-        <br>
-        <br>
-         
-        <h2> <span>
-            Delete a Database in SQL
-        </span> </h2>
-        <p>Once your database is created, we can switch to that database to begin adding tables, inserting data, and performing queries.</p>
-        <br>
-        <span style="font-size: 20px ; background-color: lightgray;border-style: ridge;padding:15px">
-            <b>
-                <strong>DROP DATABASE</strong>
-            </b> ChetanMehra_db;
-        </span>
 
 
-        <br>
-        <br>
-        <br>
-            <span>
-                <p>
-                    <span>Important Points About SQL CREATE DATABASE </span>
-                    <ul style="font-size: 15px;">
-                            <li value="1">
-                                <b><strong>Database Naming Conventions:</strong></b>
-                                    <span> When establishing a database, it is essential to ensure that the name is unique within your SQL environment. While most SQL implementations treat database names as case-insensitive, maintaining consistency in the naming format is advisable. Avoid using spaces; instead, opt for underscores (_). Example: my_database is preferable to my database.
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
 
-                                    </span>
-                                    <br>
-                            </li>
-                            <li value="2">
-                                <b><strong>Maximum Length of Database Names:</strong></b>
-                                <span> The typical maximum length for a database name in SQL is 128 characters. Ensure that your database name is both clear and concise while complying with this limit.
-
-                                    </span>
-                                    <br>
-                            </li>
-                            <li value="3"><b><strong>Permissions:</strong></b><span> It is imperative to possess the requisite privileges to create databases within your SQL environment. In many systems, the CREATE DATABASE command can only be executed by users with administrative privileges.
-
-                                </span>
-                                <br>
-                            </li>
-                            <li value="4"><b><strong>Case Insensitivity:</strong></b><span> Most SQL </span><a href="https://www.geeksforgeeks.org/introduction-of-dbms-database-management-system-set-1/" target="_blank" rel="noopener"><span>DBMSs</span></a><span> consider database names to be case-insensitive; however, it is recommended to consistently use lowercase or follow a uniform formatting style throughout your environment.</span><br></li><li value="5"><b><strong>Compatibility Across SQL Databases:</strong></b><span> While the CREATE DATABASE statement is generally similar across various SQL databases such as </span><a href="https://www.geeksforgeeks.org/mysql-tutorial/" target="_blank" rel="noopener"><span>MySQL</span></a><span>, PostgreSQL, and SQL Server, be mindful of minor syntactical differences that may exist in specific systems.
-
-                                </span>
-                            </li>
-                        </ul>
+                <form id="form" class="login" action="post">
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input id="email" type="text" class="login__input" placeholder="User name / Email">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input id="password" type="password" class="login__input" placeholder="Password">
+                    </div>
                     
-                </p>
-            </span>
-
-
-
-
-
-
-            <h1>   Page 2
-                <br>
-                <br>
-
-                <h2> <span>
-                    CREATE SCHEMA
-            </span> </h2>
-            <p>CREATE SCHEMA statement used to create a new schema in the current database.
-                <br>The CREATE SCHEMA statement can also create tables and views within the new schema and set GRANT, DENY, or permissions on those objects</p>
-                <p style=" color:black; background-color: lightgray;margin-right:50% ; border-style: ridge;" ><br><b>
-                <strong>CREATE SCHEMA </strong></b>CM <br> GO
+                    <button class="button login__submit" onclick="auth(event)">
+                                <span class="button__text">Log In Now</span>
+                                <i class="button__icon fas fa-chevron-right"></i>
+                            </button>				
+          
+                </form>
+                <script>
+                    function auth(event) {
+                        event.preventDefault();
                 
-            </p>
-
-            <p>View All SQL Server SCHEMA </p>
-            
-            <p style=" color:black; background-color: lightgray;margin-right:50% ; border-style: ridge;" >
-            <strong>SELECT  *  FROM sys.schemas </strong></p>
-            <br><br>
-            <h2>DROP SCHEMA</h2>
-            <p>The DROP SCHEMA statement could be used to delete a schema from a database</p>
-            <p style=" color:black; background-color: lightgray;margin-right:50% ; border-style: ridge;" >
-                DROP SCHEMA [IF EXISTS] schema_name;</p>
-
-
-
-                <br>
-                <br>
-
-                <h2> <span>
-                    CREATE TABLE
-            </span> </h2>
-            <p>The SQL CREATE TABLE statement is a foundational command used to define and structure a new table in a database.</p>
-                <p style=" color:black; background-color: lightgray;margin-right:50% ; border-style: ridge;" ><br><b>
-                <strong>CREATE table table_name </strong></b>
-                        <span style="margin-right:10%"><br>
-                            &emsp;&emsp;&emsp; (<br>
-                            &emsp;&emsp;&emsp;&emsp; Column1 datatype (size),<br>
-                            &emsp;&emsp;&emsp;&emsp; Column2 datatype (size),<br>
-                            &emsp;&emsp;&emsp;&emsp; .<br>
-                            &emsp;&emsp;&emsp;&emsp; .<br>
-                            &emsp;&emsp;&emsp;&emsp; ColumnN datatype (size),<br>
-                            &emsp;&emsp;&emsp; )<br> </span></p>
+                        var email = document.getElementById("email").value;
+                        var password = document.getElementById("password").value;
                 
-        
-            <ul>
-                <li value="1"><b><strong>table_name</strong></b><span>: The name you assign to the new table.</span></li>
-                <li value="2"><b><strong>column1, column2, … </strong></b><span>: The names of the columns in the table.</span></li>
-                <li value="3"><b><strong>datatype(size):</strong></b><span> Defines the data type and size of each column.</span></li>
-            </ul>
-       
-            <br><br>
-
-            <h2>DROP TABLE</h2>
-            <p>The DROP TABLE statement could be used to delete a Table from a database</p>
-            
-            
-            <p style=" color:black; background-color: lightgray;margin-right:50% ; border-style: ridge;" >
-                DROP TABLE [IF EXISTS] table_name;</p>
-            <br>
-            <br>
-
-                <h2> <span>
-                    Create Table From Another Table
-            </span> </h2>
-            <p>We can also use CREATE TABLE to create a copy of an existing table. In the new table, it gets the exact column definition all columns or specific columns can be selected.</p>
-            <p style=" color:black; background-color: lightgray;margin-right:50% ; border-style: ridge;" ><br><b>
-                <strong>CREATE TABLE  </strong></b>new_table_name AS
-                        <span><br>
-                            &emsp;&emsp;&emsp;&emsp;  <strong>SELECT</strong> column1, column2,…<br>
-                            &emsp;&emsp;&emsp;&emsp;  <strong>FROM</strong> existing_table_name;<br>
-                            
-            
-
-            <br>
-            <br>
-
-                <h2> <span>
-                    INSERT INTO Command
-            </span> </h2>
-            <p>To add data to the table, we use INSERT INTO command.</p>
-            
-
-                <p style=" color:black; background-color: lightgray;margin-right:50% ; border-style: ridge;" ><br><b>
-                <strong>INSERT INTO   </strong></b>Customer (CustomerID, FullName, Country)
-                        <span><br>
-                            &emsp;&emsp;&emsp;&emsp;  <strong>VALUES </strong> (1, 'Shubham, 'India'),<br>
-                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  (2, 'Aman ', 'Australia',),<br>
-                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  (3, 'Naveen', 'Sri lanka');
-            
-
-        <br>
-        <br>
-        <br>
-            <span>
-                <p>
-                    <span>Important Points About SQL CREATE TABLE Statement</span>
-                    <ul style="font-size: 15px;">
-                            <li value="1">
-                                
-                                    <span>CREATE TABLE statement is used to create new table in a database.
-
-                                    </span>
-                                    <br>
-                            </li>
-                            <li value="2">
-                                
-                                <span>It defines the structure of table including name and datatype of columns.
-
-                                    </span>
-                                    <br>
-                            </li>
-                            <li value="3">
-                                <span> The DESC table_name; command can be used to display the structure of the created table.
-
-                                </span>
-                                <br>
-                            </li>
-                            <li value="4">
-                                <span> We can also add constraint to table like  NOT NULL, UNIQUE, CHECK, and DEFAULT
-
-                                </span>
-                            </li>
-                            <li value="5">
-                                <span> If you try to create a table that already exists, MySQL will throw an error. To avoid this, you can use the CREATE TABLE IF NOT EXISTS syntax.
-
-                                </span>
-                            </li>
-                        </ul>
-                    
-                </p>
-            </span>
-
-
-            <br>
-            <br>
-
-            <h2> <span>
-                CREATE VIEW
-        </span> </h2>
-        <p>view is a virtual table created from a query on one or more underlying tables. Unlike a regular table, a view does not store the data itself. Instead, it creates a result set when queried. Views are created using SELECT queries.</p>
-            <p style=" color:black; background-color: lightgray;margin-right:50% ; border-style: ridge;" ><br><b>
-            <strong>CREATE VIEW view_name AS</strong></b>
-                    <span><br>
-                        &emsp; SELECT Column1 ,Column2....,<br>
-                        &emsp; FROM table_name <br>
-                        &emsp; where condition </span></p>
-            
-    
-        <ul>
-            <li value="1"><b><strong>view_name:</strong></b><span>: The name of the view you want to create..</span></li>
-            <li value="2"><b><strong>SELECT column1, column2, ...:</strong></b><span>: The SELECT statement that defines the data to be included in the view..</span></li>
-            <li value="3"><b><strong>table_name</strong></b><span>The name of the table(s) from which the data is retrieved</span></li>
-            <li value="4"><b><strong>condition:</strong></b><span>Optional. The condition(s) to filter the data.</span></li>
-        </ul>
-
-
-
-
-
-        </body>
+                        if (email === "admin@gmail.com" && password === "sql_view") {
+                            window.location.replace("1.html");
+                        } else {
+                            alert("Invalid information");
+                            return;
+                        }
+                    }
+                </script> 
+                <div class="social-login">
+                    <h3>log in via</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-login__icon fab fa-instagram"></a>
+                        <a href="#" class="social-login__icon fab fa-facebook"></a>
+                        <a href="#" class="social-login__icon fab fa-twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+  
+        </div>
+    </div>
+</body>
 </html>
