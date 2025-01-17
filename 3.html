@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,42 @@
     <style>
         h1 {
             font-size: 40px;
-            
+
             color: var(--color-black);
-            margin: 0px; 
-            font-family:Georgia;}
-        
+            margin: 0px;
+            font-family: Georgia;
+        }
+
         h2 {
             font-size: 25px;
-            color: darkorchid;    
-            
-            margin: 0px; 
-            font-family:Georgia;}
-            
+            color: darkorchid;
 
-        p,ul { 
-            font-family:Georgia;
+            margin: 0px;
+            font-family: Georgia;
+        }
+
+
+        p,
+        ul {
+            font-family: Georgia;
             font-size: 18px;
             color: darkgreen;
         }
-    
 
-        
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid darkgray
+        }
     </style>
 </head>
+
 <body>
     <span>
-        
+
         <button style="  border: none;    padding-right: 40%;   background-color:white;">
-            
+
         </button>
         <button style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
         font-size: 16px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='1.html'">
@@ -45,63 +54,207 @@
         font-size: 16px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='2.html'">
             Table
         </button>
-        
+        <button style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
+        font-size: 12px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='3.html'">
+            Select <br>Query
+        </button>
+
     </span>
-    
 
 
-        <h2> <span>
-                    SELECT 
-            </span> </h2>
-            <p>The SELECT statement is used to select data from a database.
-                
-                <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;" ><br><b>
-                <strong >SELECT </strong> column1, column2, ... <br><strong > FROM</strong> table_name;
-                
-            </p>
 
-        <br>
-        <br>
-        <h2> <span>
-                SELECT ALL columns
+    <h2> <span>
+            SELECT
         </span> </h2>
-        <p>The SELECT statement is used to select data from a database.
-            
-            <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;" ><br><b>
-            <strong >SELECT </strong> * <strong > FROM</strong> table_name;
-            
-        </p>
+    <p>The SELECT statement is used to select data from a database.
 
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;"><br><b>
+            <strong>SELECT </strong> column1, column2, ... <br><strong> FROM</strong> table_name;
 
+    </p>
+    <h2> <span>
+            SELECT DISTINCT
+        </span> </h2>
+    <p> The SELECT DISTINCT statement is used to return only distinct (different) values.
+        <br>
 
-        
-        <table style="width: 100%">
-            <th>
-                <td style="width: 10% ;border-collapse: collapse; border: 0px solid darkgray;">
-                    &nbsp;
-                </td>
-                <td style="width: 40%;border-collapse: collapse; border: 1px solid darkgray;">
-                    SELECT
-                </td>
-                <td style="width: 50%">
-                    &nbsp
-                </td>
-              
-            </th>
-            <tr>
-              <td>Breed</td>
-              <td>Jack Russell</td>
-              <td>Poodle</td>
-              
-            </tr>
-            
-          </table>
-          
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;"><br><b>
+            <strong>SELECT DISTINCT </strong> column1, column2, ... <br><strong> FROM</strong> table_name;
+
+    </p>
+    <br>
+    <h2> <span>
+            SELECT ALL columns
+        </span> </h2>
+    <p>The SELECT statement is used to select data from a database.
+
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;"><br><b>
+            <strong>SELECT </strong> * <strong> FROM</strong> table_name;
+
+    </p>
 
 
 
 
+    <table style="width: 100%">
+        <th>
+        <td style="width: 10%">
+            &nbsp;
+        </td>
+        <td style="width: 40%">
+            &nbsp;
+        </td>
+        <td style="width: 50%">
+            &nbsp;
+        </td>
+
+        </th>
+        <tr style="height: 40px">
+            <td></td>
+            <td>FIRST</td>
+            <td>SELECT FIRST (columnName) FROM tableName
+            </td>
+            <td style="font-family: Georgia;font-size: 14px;color: darkgreen;">The SELECT FIRST clause is used in some
+                SQL databases (primarily MS Access) to retrieve the first record
+                from a table based on the order in which data is stored or queried</td>
+        </tr>
+        <tr style="height: 40px">
+            <td></td>
+            <td>LAST</td>
+            <td>SELECT LAST (columnName) FROM tableName</td>
+            <td style="font-family: Georgia;font-size: 14px;color: darkgreen;">
+                SELECT LAST is a concept or function often used to describe retrieving the last record or last row from
+                a table in SQL.</td>
+        </tr>
+        <tr style="height: 40px">
+            <td></td>
+            <td>TOP</td>
+            <td>SELECT column1, column2, … TOP count FROM tableName</td>
+            <td style="font-family: Georgia;font-size: 14px;color: darkgreen;">
+                The SELECT TOP clause in SQL only returns the specified number of rows from the table.</td>
+        </tr>
+        <tr style="height: 40px">
+            <td></td>
+            <td>Limit</td>
+            <td>SELECT columnName FROM tableName limit 5</td>
+            <td style="font-family: Georgia;font-size: 14px;color: darkgreen;">
+                SQL LIMIT Clause limits the number of results returned in the results set.</td>
+        </tr>
+        <tr style="height: 40px">
+            <td></td>
+            <td>FETCH FIRST</td>
+            <td>SELECT columns FROM table WHERE condition FETCH FIRST n ROWS ONLY;</td>
+            <td style="font-family: Georgia;font-size: 14px;color: darkgreen;">
+                SQL FETCH FIRST clause fetches the first given number of rows from the table..</td>
+        </tr>
+        <tr style="height: 40px">
+            <td></td>
+            <td>Date</td>
+            <td>SELECT FirstName, LastName, InvoiceDate FROM Employee WHERE InvoiceDate BETWEEN '2021-01-01' AND
+                '2022-01-01';</td>
+            <td style="font-family: Georgia;font-size: 14px;color: darkgreen;">
+                SQL functions allow you to extract specific components (like year, month, or day) from a DATE or
+                DATETIME column.<br>
+                <br>YEAR(): Extracts the year from a date.
+                <br>MONTH(): Extracts the month from a date.
+                <br>DAY(): Extracts the day from a date.
+            </td>
+        </tr>
+    </table>
+    <br><br>
+
+    <h2> <span>
+            INSERT Statement
+        </span> </h2>
+    <p>The INSERT statement is used to add new records to a database table.
+
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
+            INSERT INTO Employees (EmployeeID, EmployeeName, Age, Department)<br>
+            VALUES<br>
+            (1, 'John Doe', 30, 'Engineering'),<br>
+            (2, 'Jane Smith', 28, 'Marketing'),<br>
+            (3, 'Sam Brown', 35, 'Sales'),<br>
+            (4, 'Lucy Green', 25, 'Human Resources');
+
+    </p>
 
 
-        </body>
+    <br>
+    <br>
+
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
+            INSERT INTO Employees (EmployeeID, EmployeeName, Age, Department)<br>
+            SELECT EmployeeID, EmployeeName, Age, Department<br>
+            FROM NewEmployees<br>
+            WHERE Age > 30;<br>
+        </b>
+    <h2> <span>
+            Copy all Columns
+        </span> </h2>
+
+
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
+            INSERT INTO first_table<br>
+            SELECT *<br>
+            FROM second_table;<>
+
+    </p>
+    <br>
+    <h2> <span>
+            Copy specific Columns
+        </span> </h2>
+
+
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
+            INSERT INTO first_table<br>
+            SELECT column_name,column_name1<br>
+            FROM second_table;<>
+
+    </p>
+    <br>
+    <h2> <span>
+            Copy specific Row
+        </span> </h2>
+
+
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
+            INSERT INTO first_table<br>
+            SELECT *<br>
+            FROM second_table;<br>
+            where condition
+
+
+    </p>
+
+    <br>
+    <h2> <span>
+            Update Statement
+        </span> </h2>
+
+
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
+            UPDATE table_name <br>
+            SET column1 = value1,<br>
+            column2 = value2,…<br>
+            where condition
+
+
+    </p>
+
+
+    <h2> <span>
+            Delete Statement
+        </span> </h2>
+
+    <p>The SQL DELETE statement removes one or more rows from a database table based on a condition.
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
+            Delete From table_name <br>
+            where condition
+    </p>
+
+    <br>
+
+
+</body>
+
 </html>
