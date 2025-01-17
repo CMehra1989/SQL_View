@@ -5,39 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        h1 {
-            font-size: 40px;
-
-            color: var(--color-black);
-            margin: 0px;
-            font-family: Georgia;
-        }
-
-        h2 {
-            font-size: 25px;
-            color: darkorchid;
-
-            margin: 0px;
-            font-family: Georgia;
-        }
+    <link rel="stylesheet" href="./style.css">
 
 
-        p,
-        ul {
-            font-family: Georgia;
-            font-size: 18px;
-            color: darkgreen;
-        }
-
-        table,
-        tr,
-        td {
-            border-collapse: collapse;
-            border: 1px solid darkgray
-        }
-    </style>
 </head>
 
 <body>
@@ -46,50 +16,56 @@
         <button style="  border: none;    padding-right: 40%;   background-color:white;">
 
         </button>
-        <button style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
-        font-size: 16px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='1.html'">
-            Database
+        <button class="button_query" style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
+        font-size: 12px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='1.html'">
+            Database<br>Query
         </button>
-        <button style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
-        font-size: 16px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='2.html'">
-            Table
+        <button class="button_query" style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
+        font-size: 12px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='2.html'">
+            Table<br>Query
         </button>
-        <button style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
-        font-size: 12px;  margin: 4px 2px;  cursor: pointer" onclick="location.href='3.html'">
+        <button class="button_query" style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
+        font-size: 12px;  margin: 4px 2px;  cursor: pointer;background-color:gray" onclick="location.href='3.html'">
             Select <br>Query
         </button>
-
+        <button class="button_query" style="border-radius: 50%;  border: none;    padding: 20px;  text-align: center;  text-decoration: none;  display: inline-block;  
+        font-size: 12px;  margin: 4px 2px;  cursor: pointer;" onclick="location.href='4.html'">
+            Join <br>Query
+        </button>
     </span>
 
 
 
     <h2> <span>
             SELECT
-        </span> </h2>
-    <p>The SELECT statement is used to select data from a database.
+        </span>
+    </h2>
+    <p>The SELECT statement is used to select data from a database.</p>
 
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;"><br><b>
-            <strong>SELECT </strong> column1, column2, ... <br><strong> FROM</strong> table_name;
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;">
+        <strong>SELECT </strong> column1, column2, ... <br><strong> FROM</strong> table_name;
 
-    </p>
     <h2> <span>
-            SELECT DISTINCT
-        </span> </h2>
-    <p> The SELECT DISTINCT statement is used to return only distinct (different) values.
-        <br>
+            SELECT DISTICT
+        </span>
+    </h2>
+    <p> The SELECT DISTINCT statement is used to return only distinct (different) values.</p>
 
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;"><br><b>
-            <strong>SELECT DISTINCT </strong> column1, column2, ... <br><strong> FROM</strong> table_name;
+
+
+
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;">
+        <strong>SELECT DISTINCT </strong> column1, column2, ... <br><strong> FROM</strong> table_name;
 
     </p>
-    <br>
+
     <h2> <span>
             SELECT ALL columns
         </span> </h2>
     <p>The SELECT statement is used to select data from a database.
 
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;"><br><b>
-            <strong>SELECT </strong> * <strong> FROM</strong> table_name;
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:70% ; border-style: ridge;">
+        <strong>SELECT </strong> * <strong> FROM</strong> table_name;
 
     </p>
 
@@ -114,7 +90,8 @@
             <td>FIRST</td>
             <td>SELECT FIRST (columnName) FROM tableName
             </td>
-            <td style="font-family: Georgia;font-size: 14px;color: darkgreen;">The SELECT FIRST clause is used in some
+            <td style="font-family: Georgia;font-size: 14px;color: darkgreen;">The SELECT FIRST clause is used
+                in some
                 SQL databases (primarily MS Access) to retrieve the first record
                 from a table based on the order in which data is stored or queried</td>
         </tr>
@@ -123,7 +100,8 @@
             <td>LAST</td>
             <td>SELECT LAST (columnName) FROM tableName</td>
             <td style="font-family: Georgia;font-size: 14px;color: darkgreen;">
-                SELECT LAST is a concept or function often used to describe retrieving the last record or last row from
+                SELECT LAST is a concept or function often used to describe retrieving the last record or last
+                row from
                 a table in SQL.</td>
         </tr>
         <tr style="height: 40px">
@@ -168,13 +146,13 @@
         </span> </h2>
     <p>The INSERT statement is used to add new records to a database table.
 
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
-            INSERT INTO Employees (EmployeeID, EmployeeName, Age, Department)<br>
-            VALUES<br>
-            (1, 'John Doe', 30, 'Engineering'),<br>
-            (2, 'Jane Smith', 28, 'Marketing'),<br>
-            (3, 'Sam Brown', 35, 'Sales'),<br>
-            (4, 'Lucy Green', 25, 'Human Resources');
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;">
+        INSERT INTO Employees (EmployeeID, EmployeeName, Age, Department)<br>
+        VALUES<br>
+        (1, 'John Doe', 30, 'Engineering'),<br>
+        (2, 'Jane Smith', 28, 'Marketing'),<br>
+        (3, 'Sam Brown', 35, 'Sales'),<br>
+        (4, 'Lucy Green', 25, 'Human Resources');
 
     </p>
 
@@ -182,21 +160,21 @@
     <br>
     <br>
 
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
-            INSERT INTO Employees (EmployeeID, EmployeeName, Age, Department)<br>
-            SELECT EmployeeID, EmployeeName, Age, Department<br>
-            FROM NewEmployees<br>
-            WHERE Age > 30;<br>
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;">
+        INSERT INTO Employees (EmployeeID, EmployeeName, Age, Department)<br>
+        SELECT EmployeeID, EmployeeName, Age, Department<br>
+        FROM NewEmployees<br>
+        WHERE Age > 30;<br>
         </b>
     <h2> <span>
             Copy all Columns
         </span> </h2>
 
 
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
-            INSERT INTO first_table<br>
-            SELECT *<br>
-            FROM second_table;<>
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;">
+        INSERT INTO first_table<br>
+        SELECT *<br>
+        FROM second_table;<>
 
     </p>
     <br>
@@ -205,10 +183,10 @@
         </span> </h2>
 
 
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
-            INSERT INTO first_table<br>
-            SELECT column_name,column_name1<br>
-            FROM second_table;<>
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;">
+        INSERT INTO first_table<br>
+        SELECT column_name,column_name1<br>
+        FROM second_table;<>
 
     </p>
     <br>
@@ -217,11 +195,11 @@
         </span> </h2>
 
 
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
-            INSERT INTO first_table<br>
-            SELECT *<br>
-            FROM second_table;<br>
-            where condition
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;">
+        INSERT INTO first_table<br>
+        SELECT *<br>
+        FROM second_table;<br>
+        where condition
 
 
     </p>
@@ -232,11 +210,11 @@
         </span> </h2>
 
 
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
-            UPDATE table_name <br>
-            SET column1 = value1,<br>
-            column2 = value2,…<br>
-            where condition
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;">
+        UPDATE table_name <br>
+        SET column1 = value1,<br>
+        column2 = value2,…<br>
+        where condition
 
 
     </p>
@@ -247,9 +225,9 @@
         </span> </h2>
 
     <p>The SQL DELETE statement removes one or more rows from a database table based on a condition.
-    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;"><br><b>
-            Delete From table_name <br>
-            where condition
+    <p style=" color:darkgreen; background-color: lightgray;margin-right:0% ; border-style: ridge;">
+        Delete From table_name <br>
+        where condition
     </p>
 
     <br>
